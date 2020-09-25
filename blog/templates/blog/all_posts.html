@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<div class="container text-center">
+    <br><br>
+    <h1>This is the blog</h1>
+    <br><br>
+
+    {% for blog in posts %}
+
+    <a href="{% url 'blog:detail' blog.id %}"><h2>{{ blog.title }}</h2></a>
+    <p>{{ blog.description }}</p>
+    <p>{{ blog.date }}</p>
+
+    <br>
+
+    {% endfor %}
+    
+
+</div>
